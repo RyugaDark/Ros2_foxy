@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mobilerobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.329663216788321 -0.735879157180775 0.474739316227002"
+        rpy="0 0 0" />
+      <mass
+        value="31.8035482068551" />
+      <inertia
+        ixx="0.576472115933572"
+        ixy="-0.00434763730675868"
+        ixz="0.0253434328957329"
+        iyy="1.85164096789447"
+        iyz="0.0012043909436197"
+        izz="2.37960755393429" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/chaitanya/ros2_ws/src/lab7/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/chaitanya/ros2_ws/src/lab7/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="linkleft">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -0.0150888529886914 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.972322926286042" />
+      <inertia
+        ixx="0.00298429263256057"
+        ixy="-7.70945828697792E-20"
+        ixz="-2.73255779818481E-35"
+        iyy="0.00555828243731783"
+        iyz="2.14831426054845E-36"
+        izz="0.00298429263256056" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/chaitanya/ros2_ws/src/lab7/meshes/linkleft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/chaitanya/ros2_ws/src/lab7/meshes/linkleft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leftjoint"
+    type="continuous">
+    <origin
+      xyz="0.19334 -0.46645 0.47913"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="linkleft" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="linkright">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 0.0150888529886914 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.972322926286042" />
+      <inertia
+        ixx="0.00298429263256057"
+        ixy="-7.54207540128912E-20"
+        ixz="4.63715245582261E-19"
+        iyy="0.00555828243731783"
+        iyz="-1.50090108899275E-19"
+        izz="0.00298429263256056" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/chaitanya/ros2_ws/src/lab7/meshes/linkright.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/chaitanya/ros2_ws/src/lab7/meshes/linkright.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rightjoint"
+    type="continuous">
+    <origin
+      xyz="0.19334 -1.0064 0.47913"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="linkright" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+</robot>
